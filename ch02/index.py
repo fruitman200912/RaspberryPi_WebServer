@@ -18,3 +18,14 @@ def up(num):
     session.append(num)
     print(session)
     return render_template("index.html")
+
+@app.route("/save/<num>")
+def up(num):
+    '''
+        1. numcount 테이블 생성(id, num, insert_at)
+        2. pymysql로 연결
+        3. 증가 한 수만큼 추가
+        4. 연결끊기
+        5. db 접속해서 조회
+    '''
+    return render_template("index.html")
